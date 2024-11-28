@@ -1,0 +1,5 @@
+asyncio
+websockets
+psycopg2
+python-dotenv
+flask
