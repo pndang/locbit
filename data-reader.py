@@ -56,7 +56,7 @@ def store_to_database(data, tag):
         elif tag == 'pc':
 
             cursor.execute("""
-                INSERT INTO pc_data (id, cpuUsagePercent, memoryUsagePercent, gpuUsagePercent, timestamp) VALUES (%s, %s, %s, %s, to_timestamp(%s / 1000.0))
+                INSERT INTO pc_data (pcName, cpuUsagePercent, memoryUsagePercent, gpuUsagePercent, timestamp) VALUES (%s, %s, %s, %s, to_timestamp(%s / 1000.0))
             """, (data['system_id'], data['cpuUsagePercent'], data['memoryUsagePercent'], data['gpuUsagePercent'], data['time']))
 
         # close database connection
