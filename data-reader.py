@@ -19,7 +19,7 @@ async def websocket_to_postgresql():
             msg = await ws.recv()
             data = json.loads(msg)
 
-            print(data)
+            # print(data)
             
             # filter for server room only
             if data.get('location') == 'Server Room':
